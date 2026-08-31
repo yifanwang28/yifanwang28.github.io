@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Yifan Wang — machine learning, robotics, perception, and curious side projects." />
+  <title>Yifan Wang — Personal Homepage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="noise"></div>
+
+  <div class="fixed-bg" aria-hidden="true">
+    <div class="bg-photo"></div>
+    <div class="bg-vignette"></div>
+    <div class="bg-grid"></div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Go to top">
+      <span class="brand-dot"></span>
+      <span>YW / 2026</span>
+    </a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#work">Work</a>
+      <a href="#life">Life</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero panel" id="home" data-section="01">
+      <div class="hero-inner">
+        <div class="portrait-wrap reveal">
+          <div class="portrait-ring"></div>
+          <img src="assets/avatar-placeholder.svg" alt="Portrait placeholder for Yifan Wang" class="portrait" />
+          <div class="portrait-label">replace with your portrait</div>
+        </div>
+
+        <div class="hero-copy reveal delay-1">
+          <div class="eyebrow">MACHINE LEARNING · ROBOTICS · PERCEPTION</div>
+          <h1>Yifan <span>Wang</span></h1>
+          <p class="hero-lede">I build systems that help machines perceive, reason about, and act in the physical world.</p>
+          <div class="hero-meta">
+            <span>Ohio, USA</span><i></i><span>AI / Robotics</span><i></i><span>Photographer & Maker</span>
+          </div>
+          <div class="cta-row">
+            <a class="button primary" href="#research">Explore my work</a>
+            <a class="button ghost" href="mailto:hello@example.com">Say hello ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-cue">
+        <span>SCROLL TO EXPLORE</span>
+        <div class="scroll-line"><b></b></div>
+      </div>
+    </section>
+
+    <section class="panel glass-section" id="about" data-section="02">
+      <div class="section-shell two-col">
+        <div class="section-kicker reveal">
+          <span>02</span>
+          <p>ABOUT</p>
+        </div>
+        <div class="section-content reveal delay-1">
+          <h2>Engineering curiosity,<br><em>from pixels to robots.</em></h2>
+          <p class="intro">My work sits at the intersection of machine learning, 3D perception, embodied intelligence, and real-world systems. I enjoy research questions that are technically deep but still lead to elegant, testable systems.</p>
+          <div class="stat-row">
+            <div><strong>3D</strong><span>Perception</span></div>
+            <div><strong>6DoF</strong><span>Pose</span></div>
+            <div><strong>VLA</strong><span>Embodied AI</span></div>
+            <div><strong>∞</strong><span>Curiosity</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel glass-section" id="education" data-section="03">
+      <div class="section-shell">
+        <div class="section-kicker reveal"><span>03</span><p>EDUCATION</p></div>
+        <div class="timeline reveal delay-1">
+          <article class="timeline-item">
+            <div class="timeline-year">2026 —</div>
+            <div>
+              <h3>Doctor of Information Technology</h3>
+              <p class="muted">Current doctoral study · technology strategy, systems, and applied AI.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-year">2020 — 2022</div>
+            <div>
+              <h3>New York University · M.S. Electrical Engineering</h3>
+              <p class="muted">Machine learning, deep learning, probability, and robot perception.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-year">2016 — 2020</div>
+            <div>
+              <h3>University of Science and Technology of China · B.Eng. Computer Science</h3>
+              <p class="muted">Foundations in computer science, systems, algorithms, and engineering.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel glass-section" id="research" data-section="04">
+      <div class="section-shell">
+        <div class="section-kicker reveal"><span>04</span><p>RESEARCH</p></div>
+        <div class="research-head reveal delay-1">
+          <h2>Questions I keep<br><em>coming back to.</em></h2>
+          <p>How much visual information does a robot actually need? When should it replan? What representations make perception useful for action?</p>
+        </div>
+
+        <div class="card-grid research-grid">
+          <article class="research-card reveal">
+            <div class="card-index">A / 01</div>
+            <h3>Egocentric Prediction</h3>
+            <p>Anticipating future interactions and motion from first-person observations.</p>
+            <div class="tags"><span>Forecasting</span><span>Temporal ML</span><span>Human Action</span></div>
+          </article>
+          <article class="research-card reveal delay-1">
+            <div class="card-index">A / 02</div>
+            <h3>3D Reconstruction</h3>
+            <p>Geometry from sparse, multimodal, or tactile observations — especially when sensing is incomplete.</p>
+            <div class="tags"><span>Gaussian Splatting</span><span>Tactile</span><span>SDF</span></div>
+          </article>
+          <article class="research-card reveal delay-2">
+            <div class="card-index">A / 03</div>
+            <h3>Embodied Intelligence</h3>
+            <p>VLA, world models, hierarchical policies, and event-driven perception–action loops.</p>
+            <div class="tags"><span>VLA</span><span>World Models</span><span>Control</span></div>
+          </article>
+          <article class="research-card reveal">
+            <div class="card-index">A / 04</div>
+            <h3>Autonomous Perception</h3>
+            <p>BEV perception, sensor fusion, free-space, 6DoF pose, and mapping for autonomy.</p>
+            <div class="tags"><span>BEV</span><span>Fusion</span><span>Pose</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel glass-section" id="projects" data-section="05">
+      <div class="section-shell">
+        <div class="section-kicker reveal"><span>05</span><p>SELECTED PROJECTS</p></div>
+        <div class="project-list reveal delay-1">
+          <article class="project-row">
+            <div class="project-no">01</div>
+            <div class="project-main"><h3>EgoPAT3D / EgoPAT3Dv2</h3><p>Egocentric 3D target prediction with temporal modeling and multi-task supervision.</p></div>
+            <div class="project-type">Research</div>
+          </article>
+          <article class="project-row">
+            <div class="project-no">02</div>
+            <div class="project-main"><h3>FusionSense</h3><p>Visual + tactile reconstruction combining GelSight observations with geometric priors.</p></div>
+            <div class="project-type">3D Vision</div>
+          </article>
+          <article class="project-row">
+            <div class="project-no">03</div>
+            <div class="project-main"><h3>BEV Perception</h3><p>Temporal BEV modeling and geometric aggregation for autonomous driving perception.</p></div>
+            <div class="project-type">Autonomy</div>
+          </article>
+          <article class="project-row">
+            <div class="project-no">04</div>
+            <div class="project-main"><h3>Robotics Platform</h3><p>A ground-up mobile robot build spanning hardware, control, sensing, ROS 2, and embodied learning.</p></div>
+            <div class="project-type">Maker</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel glass-section" id="work" data-section="06">
+      <div class="section-shell two-col">
+        <div class="section-kicker reveal"><span>06</span><p>EXPERIENCE</p></div>
+        <div class="section-content reveal delay-1">
+          <div class="experience-block">
+            <div class="experience-head"><h3>Machine Learning / Infrastructure Engineer</h3><span>Ambarella / Oculii</span></div>
+            <p>Production-facing engineering across ML infrastructure, observability, GPU systems, Kubernetes, internal AI tooling, and perception-adjacent workflows.</p>
+          </div>
+          <div class="experience-block">
+            <div class="experience-head"><h3>Research Assistant</h3><span>NYU AI4CE Lab</span></div>
+            <p>Research in 3D vision, egocentric perception, robotic sensing, reconstruction, and 6DoF pose estimation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel glass-section" id="life" data-section="07">
+      <div class="section-shell">
+        <div class="section-kicker reveal"><span>07</span><p>BEYOND WORK</p></div>
+        <div class="life-layout">
+          <div class="life-copy reveal delay-1">
+            <h2>I also care about<br><em>the texture of life.</em></h2>
+            <p>I spend time behind a camera, sketching and painting, practicing violin, building robots, learning how machines work, and occasionally overthinking cars, lenses, coffee, and the perfect mechanical design.</p>
+            <div class="interest-cloud">
+              <span>Photography</span><span>Watercolor</span><span>Violin</span><span>Cars</span><span>3D Printing</span><span>Robotics</span><span>Design</span><span>Travel</span>
+            </div>
+          </div>
+          <div class="photo-stack reveal delay-2">
+            <div class="photo-card p1"><img src="assets/photo-placeholder-1.svg" alt="Photography placeholder"></div>
+            <div class="photo-card p2"><img src="assets/photo-placeholder-2.svg" alt="Maker project placeholder"></div>
+            <div class="photo-card p3"><img src="assets/photo-placeholder-3.svg" alt="Travel photo placeholder"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel cat-section" id="cat" data-section="08">
+      <div class="cat-bg"></div>
+      <div class="section-shell cat-layout">
+        <div class="cat-copy reveal">
+          <div class="section-kicker compact"><span>08</span><p>MY CAT</p></div>
+          <h2>The smallest member<br>of the research team.</h2>
+          <p>Chief interruption officer. Keyboard inspector. Expert in embodied intelligence, especially when snacks are involved.</p>
+          <div class="cat-facts"><span>🐾 Professional supervisor</span><span>📦 Box optimization specialist</span><span>😼 Zero respect for deadlines</span></div>
+        </div>
+        <div class="cat-frame reveal delay-1">
+          <img src="assets/cat-placeholder.svg" alt="Cat photo placeholder" />
+          <div class="cat-note">replace with your favorite cat photo</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel contact-section" id="contact" data-section="09">
+      <div class="contact-inner reveal">
+        <div class="section-kicker compact"><span>09</span><p>CONTACT</p></div>
+        <h2>Let’s build something<br><em>worth thinking about.</em></h2>
+        <div class="contact-links">
+          <a href="mailto:hello@example.com">Email ↗</a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        </div>
+        <footer>
+          <span>© 2026 Yifan Wang</span>
+          <span>Designed as a living notebook.</span>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <div class="progress-rail" aria-hidden="true"><span id="progress"></span></div>
+  <div class="section-counter" aria-hidden="true"><span id="sectionNow">01</span><b>/ 09</b></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

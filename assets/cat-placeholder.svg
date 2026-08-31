@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#253039"/><stop offset="1" stop-color="#111417"/></linearGradient></defs>
+<rect width="800" height="1000" fill="url(#g)"/>
+<g transform="translate(115 160)" fill="#e5e5df" opacity=".7">
+<path d="M95 190 35 20l170 120M475 190 535 20 365 140"/>
+<ellipse cx="285" cy="330" rx="245" ry="240"/>
+</g>
+<g fill="#14181b"><ellipse cx="305" cy="485" rx="34" ry="44"/><ellipse cx="495" cy="485" rx="34" ry="44"/><path d="M375 565h50l-25 28Z"/></g>
+<path d="M400 600c-50 12-70 50-80 80m80-80c50 12 70 50 80 80" stroke="#14181b" stroke-width="8" fill="none"/>
+<text x="400" y="900" text-anchor="middle" fill="#d9ff72" font-size="34" font-family="monospace">YOUR CAT</text>
+</svg>
