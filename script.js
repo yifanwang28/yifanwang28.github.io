@@ -3,6 +3,12 @@ const sections = [...document.querySelectorAll('.panel')];
 const progress = document.getElementById('progress');
 const sectionNow = document.getElementById('sectionNow');
 const bg = document.querySelector('.bg-photo');
+const lightbox = document.getElementById('portraitLightbox');
+const lightboxImage = lightbox?.querySelector('img');
+const lightboxClose = lightbox?.querySelector('.lightbox-close');
+const researchSection = document.getElementById('research');
+const researchReveal = document.querySelector('.research-reveal');
+const researchDrawer = document.getElementById('researchDrawer');
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -34,3 +40,37 @@ function onScroll(){
 }
 window.addEventListener('scroll', onScroll, {passive:true});
 onScroll();
+
+researchReveal?.addEventListener('click', () => {
+  const isOpen = researchSection?.classList.toggle('research-open') ?? false;
+  researchReveal.setAttribute('aria-expanded', String(isOpen));
+  researchReveal.setAttribute('aria-label', isOpen ? 'Hide research questions' : 'Reveal research questions');
+  researchDrawer?.setAttribute('aria-hidden', String(!isOpen));
+});
+
+function closeLightbox() {
+  if (!lightbox) return;
+  lightbox.classList.remove('is-open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('lightbox-open');
+}
+
+document.querySelectorAll('.portrait-item').forEach((item) => {
+  item.addEventListener('click', () => {
+    if (!lightbox || !lightboxImage) return;
+    lightboxImage.src = item.dataset.full || item.querySelector('img').src;
+    lightboxImage.alt = item.querySelector('img').alt;
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+    lightboxClose?.focus();
+  });
+});
+
+lightboxClose?.addEventListener('click', closeLightbox);
+lightbox?.addEventListener('click', (event) => {
+  if (event.target === lightbox) closeLightbox();
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && lightbox?.classList.contains('is-open')) closeLightbox();
+});
