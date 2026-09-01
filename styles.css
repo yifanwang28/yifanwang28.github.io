@@ -73,10 +73,9 @@ body.is-scrolling .toc-shell:not(:hover):not(.is-open) .toc-panel{opacity:0;visi
 #about,#research,#projects,#work{min-height:auto}
 .hero-inner{width:min(1240px,100%);margin:auto;display:grid;grid-template-columns:minmax(0,2fr) minmax(240px,1fr);gap:5vw;align-items:center}
 .hero-copy{grid-column:1;grid-row:1}
-.portrait-wrap{position:relative;grid-column:2;grid-row:1;width:min(25vw,300px);aspect-ratio:4/5;margin:auto}
+.portrait-wrap{position:relative;grid-column:2;grid-row:1;width:min(18vw,220px);aspect-ratio:4/5;margin:auto}
 .portrait{width:100%;height:100%;object-fit:cover;border-radius:180px 180px 32px 32px;border:1px solid rgba(255,255,255,.2);box-shadow:0 30px 100px rgba(0,0,0,.46);background:#0f1418}
 .portrait-ring{position:absolute;inset:-18px;border:1px solid rgba(255,255,255,.22);border-radius:200px 200px 42px 42px;transform:rotate(-3deg)}
-.portrait-label{position:absolute;bottom:18px;right:-42px;padding:9px 12px;border:1px solid var(--line);background:rgba(4,6,7,.6);backdrop-filter:blur(14px);font:400 9px/1.2 DM Mono,monospace;text-transform:uppercase;letter-spacing:.11em;color:var(--ink-faint)}
 .eyebrow{font:500 11px/1.4 DM Mono,monospace;letter-spacing:.22em;color:var(--accent);margin-bottom:28px}
 .hero h1{font-size:clamp(40px,4.75vw,75px);letter-spacing:-.05em;line-height:.9;margin:0;font-weight:650}
 .hero h1 span{font-family:Manrope,system-ui,sans-serif;font-weight:500;font-style:normal;color:var(--accent)}
@@ -159,7 +158,7 @@ body.is-scrolling .toc-shell:not(:hover):not(.is-open) .toc-panel{opacity:0;visi
 body.lightbox-open{overflow:hidden}
 
 @media (max-width: 960px){
-  .topbar{padding:22px 20px}.nav{display:none}.panel{padding:var(--section-padding)}.hero-inner{grid-template-columns:1fr;gap:56px}.hero-copy{grid-column:1;grid-row:1;text-align:left}.portrait-wrap{grid-column:1;grid-row:2;width:min(68vw,350px)}.portrait-label{right:-12px}.two-col{grid-template-columns:1fr;gap:34px}.timeline,.research-head,.card-grid,.project-list,.life-layout{margin-left:0}.timeline-item{grid-template-columns:1fr;gap:8px}.research-head{grid-template-columns:1fr;gap:6px}.card-grid{grid-template-columns:1fr}.stat-row{grid-template-columns:repeat(2,1fr)}.project-row{grid-template-columns:42px 1fr}.project-type{display:none}.life-layout,.cat-layout{grid-template-columns:1fr}.photo-stack{min-height:520px;margin-top:20px}.cat-frame{justify-self:center;width:min(74vw,430px);margin-top:30px}.progress-rail,.section-counter{display:none}.glass-section:before{inset:var(--section-edge);border-radius:24px}
+  .topbar{padding:22px 20px}.nav{display:none}.panel{padding:var(--section-padding)}.hero-inner{grid-template-columns:1fr;gap:56px}.hero-copy{grid-column:1;grid-row:1;text-align:left}.portrait-wrap{grid-column:1;grid-row:2;width:min(52vw,210px)}.two-col{grid-template-columns:1fr;gap:34px}.timeline,.research-head,.card-grid,.project-list,.life-layout{margin-left:0}.timeline-item{grid-template-columns:1fr;gap:8px}.research-head{grid-template-columns:1fr;gap:6px}.card-grid{grid-template-columns:1fr}.stat-row{grid-template-columns:repeat(2,1fr)}.project-row{grid-template-columns:42px 1fr}.project-type{display:none}.life-layout,.cat-layout{grid-template-columns:1fr}.photo-stack{min-height:520px;margin-top:20px}.cat-frame{justify-self:center;width:min(74vw,430px);margin-top:30px}.progress-rail,.section-counter{display:none}.glass-section:before{inset:var(--section-edge);border-radius:24px}
 }
 @media (max-width: 560px){
   .hero h1{font-size:13vw}.hero-lede{font-size:20px}.stat-row{grid-template-columns:1fr 1fr}.research-card{min-height:250px}.photo-stack{min-height:400px}.contact-links{flex-direction:column;align-items:flex-start}footer{flex-direction:column}.bg-grid{background-size:42px 42px}
@@ -184,6 +183,6 @@ body.lightbox-open{overflow:hidden}
 @media (min-width: 561px) and (max-width: 960px){
   .hero-inner{grid-template-columns:minmax(0,2fr) minmax(190px,1fr);gap:4vw}
   .hero-copy{grid-column:1;grid-row:1}
-  .portrait-wrap{grid-column:2;grid-row:1;width:min(29vw,240px)}
+  .portrait-wrap{grid-column:2;grid-row:1;width:min(22vw,185px)}
   .hero-lede{font-size:clamp(17px,2.4vw,21px)}
 }
