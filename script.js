@@ -9,6 +9,21 @@ const lightboxClose = lightbox?.querySelector('.lightbox-close');
 const researchSection = document.getElementById('research');
 const researchReveal = document.querySelector('.research-reveal');
 const researchDrawer = document.getElementById('researchDrawer');
+const tocShell = document.querySelector('.toc-shell');
+const tocTrigger = document.querySelector('.toc-trigger');
+const tocLinks = [...document.querySelectorAll('[data-toc]')];
+let scrollTimer;
+
+function setTocContext(sectionId) {
+  const activeIndex = tocLinks.findIndex(link => link.dataset.toc === sectionId);
+  if (activeIndex < 0) return;
+  tocLinks.forEach((link, index) => {
+    link.classList.toggle('is-current', index === activeIndex);
+    link.classList.toggle('is-context', Math.abs(index - activeIndex) <= 1);
+  });
+}
+
+setTocContext('home');
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -24,10 +39,17 @@ const sectionObserver = new IntersectionObserver((entries) => {
   if (!visible) return;
   const index = sections.indexOf(visible.target) + 1;
   sectionNow.textContent = String(index).padStart(2,'0');
+  setTocContext(visible.target.id);
 }, { threshold: [0.3,0.5,0.7] });
 sections.forEach(s => sectionObserver.observe(s));
 
 function onScroll(){
+  document.body.classList.add('is-scrolling');
+  tocShell?.classList.remove('is-open');
+  tocTrigger?.setAttribute('aria-expanded', 'false');
+  clearTimeout(scrollTimer);
+  scrollTimer = setTimeout(() => document.body.classList.remove('is-scrolling'), 180);
+
   const max = document.documentElement.scrollHeight - innerHeight;
   const y = scrollY;
   const pct = max > 0 ? (y / max) * 100 : 0;
@@ -40,6 +62,16 @@ function onScroll(){
 }
 window.addEventListener('scroll', onScroll, {passive:true});
 onScroll();
+
+tocTrigger?.addEventListener('click', () => {
+  const isOpen = tocShell?.classList.toggle('is-open') ?? false;
+  tocTrigger.setAttribute('aria-expanded', String(isOpen));
+});
+
+tocLinks.forEach(link => link.addEventListener('click', () => {
+  tocShell?.classList.remove('is-open');
+  tocTrigger?.setAttribute('aria-expanded', 'false');
+}));
 
 researchReveal?.addEventListener('click', () => {
   const isOpen = researchSection?.classList.toggle('research-open') ?? false;
@@ -72,5 +104,9 @@ lightbox?.addEventListener('click', (event) => {
   if (event.target === lightbox) closeLightbox();
 });
 document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && tocShell?.classList.contains('is-open')) {
+    tocShell.classList.remove('is-open');
+    tocTrigger?.setAttribute('aria-expanded', 'false');
+  }
   if (event.key === 'Escape' && lightbox?.classList.contains('is-open')) closeLightbox();
 });

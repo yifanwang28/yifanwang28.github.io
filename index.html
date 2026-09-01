@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
   <div class="ambient ambient-a"></div>
@@ -26,13 +26,24 @@
       <span class="brand-dot"></span>
       <span>YW / 2026</span>
     </a>
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#work">Work</a>
-      <a class="temporarily-hidden" href="#life" hidden style="display:none!important">Life</a>
-    </nav>
   </header>
+
+  <aside class="toc-shell" aria-label="Page directory">
+    <button class="toc-trigger" type="button" aria-label="Open page directory" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="toc-panel">
+      <a href="#home" data-toc="home"><i></i><span>Home</span></a>
+      <a href="#about" data-toc="about"><i></i><span>About</span></a>
+      <a href="#education" data-toc="education"><i></i><span>Education</span></a>
+      <a href="#research" data-toc="research"><i></i><span>Research</span></a>
+      <a href="#projects" data-toc="projects"><i></i><span>Projects</span></a>
+      <a href="#work" data-toc="work"><i></i><span>Experience</span></a>
+      <a href="#cat" data-toc="cat"><i></i><span>My Cat</span></a>
+      <a href="#portraits" data-toc="portraits"><i></i><span>Portraits</span></a>
+      <a href="#contact" data-toc="contact"><i></i><span>Contact</span></a>
+    </nav>
+  </aside>
 
   <main>
     <section class="hero panel" id="home" data-section="01">
@@ -62,10 +73,6 @@
           <p class="hero-lede">I build systems that help machines perceive,<br>reason about, and act in the physical world.</p>
           <div class="hero-meta">
             <span>Ohio, USA</span><i></i><span>AI / Robotics</span><i></i><span>Photographer & Maker</span>
-          </div>
-          <div class="cta-row">
-            <a class="button primary" href="#research">Explore my work</a>
-            <a class="button ghost" href="mailto:hello@example.com">Say hello ↗</a>
           </div>
         </div>
       </div>
@@ -284,6 +291,6 @@
   <div class="progress-rail" aria-hidden="true"><span id="progress"></span></div>
   <div class="section-counter" aria-hidden="true"><span id="sectionNow">01</span><b>/ 10</b></div>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
