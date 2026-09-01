@@ -12,7 +12,32 @@ const researchDrawer = document.getElementById('researchDrawer');
 const tocShell = document.querySelector('.toc-shell');
 const tocTrigger = document.querySelector('.toc-trigger');
 const tocLinks = [...document.querySelectorAll('[data-toc]')];
+const visitorStat = document.getElementById('visitorStat');
+const visitorCount = document.getElementById('visitorCount');
 let scrollTimer;
+
+if (location.hostname === 'yifanwang28.github.io') {
+  const tracker = document.createElement('script');
+  tracker.async = true;
+  tracker.src = 'https://gc.zgo.at/count.js';
+  tracker.dataset.goatcounter = 'https://yifanwang28.goatcounter.com/count';
+  document.body.appendChild(tracker);
+
+  fetch('https://yifanwang28.goatcounter.com/counter/TOTAL.json')
+    .then(response => {
+      if (!response.ok) throw new Error('Visitor count unavailable');
+      return response.json();
+    })
+    .then(data => {
+      if (visitorCount && data.count) {
+        visitorCount.textContent = data.count;
+        visitorStat?.removeAttribute('hidden');
+      }
+    })
+    .catch(() => {
+      if (visitorStat) visitorStat.title = 'Visitor count temporarily unavailable';
+    });
+}
 
 function setTocContext(sectionId) {
   const activeIndex = tocLinks.findIndex(link => link.dataset.toc === sectionId);
