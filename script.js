@@ -55,7 +55,7 @@ function closeLightbox() {
   document.body.classList.remove('lightbox-open');
 }
 
-document.querySelectorAll('.portrait-item').forEach((item) => {
+document.querySelectorAll('[data-lightbox-image]').forEach((item) => {
   item.addEventListener('click', () => {
     if (!lightbox || !lightboxImage) return;
     lightboxImage.src = item.dataset.full || item.querySelector('img').src;
