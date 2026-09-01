@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
   <div class="ambient ambient-a"></div>
@@ -30,7 +30,7 @@
       <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#work">Work</a>
-      <a class="temporarily-hidden" href="#life">Life</a>
+      <a class="temporarily-hidden" href="#life" hidden style="display:none!important">Life</a>
     </nav>
   </header>
 
@@ -186,7 +186,7 @@
       </div>
     </section>
 
-    <section class="panel glass-section temporarily-hidden" id="life" data-section="07">
+    <section class="panel glass-section temporarily-hidden" id="life" data-section="07" hidden aria-hidden="true" style="display:none!important">
       <div class="section-shell">
         <div class="section-kicker reveal"><span>07</span><p>BEYOND WORK</p></div>
         <div class="life-layout">
@@ -216,10 +216,10 @@
           <div class="cat-facts"><span>🐾 Professional supervisor</span><span>📦 Box optimization specialist</span><span>😼 Zero respect for deadlines</span></div>
         </div>
         <div class="cat-gallery reveal delay-1" aria-label="Cat photos">
-          <figure><button class="cat-photo" type="button" data-lightbox-image data-full="assets/cat-1.JPG" aria-label="View cat photo 1"><img src="assets/web/cat-1.JPG" alt="My cat portrait 1" loading="lazy" decoding="async" /></button></figure>
-          <figure><button class="cat-photo" type="button" data-lightbox-image data-full="assets/cat-2.jpeg" aria-label="View cat photo 2"><img src="assets/web/cat-2.jpeg" alt="My cat portrait 2" loading="lazy" decoding="async" /></button></figure>
-          <figure><button class="cat-photo" type="button" data-lightbox-image data-full="assets/cat-3.JPG" aria-label="View cat photo 3"><img src="assets/web/cat-3.JPG" alt="My cat portrait 3" loading="lazy" decoding="async" /></button></figure>
-          <figure><button class="cat-photo" type="button" data-lightbox-image data-full="assets/cat-4.JPG" aria-label="View cat photo 4"><img src="assets/web/cat-4.JPG" alt="My cat portrait 4" loading="lazy" decoding="async" /></button></figure>
+          <figure><button class="cat-photo" type="button" data-lightbox-image data-full="assets/cat-1.JPG" aria-label="View cat photo 1"><img src="assets/web/cat-1.JPG?v=2" alt="My cat portrait 1" loading="lazy" decoding="async" /></button></figure>
+          <figure><button class="cat-photo" type="button" data-lightbox-image data-full="assets/cat-2.jpeg" aria-label="View cat photo 2"><img src="assets/web/cat-2.jpeg?v=2" alt="My cat portrait 2" loading="lazy" decoding="async" /></button></figure>
+          <figure><button class="cat-photo" type="button" data-lightbox-image data-full="assets/cat-3.JPG" aria-label="View cat photo 3"><img src="assets/web/cat-3.JPG?v=2" alt="My cat portrait 3" loading="lazy" decoding="async" /></button></figure>
+          <figure><button class="cat-photo" type="button" data-lightbox-image data-full="assets/cat-4.JPG" aria-label="View cat photo 4"><img src="assets/web/cat-4.JPG?v=2" alt="My cat portrait 4" loading="lazy" decoding="async" /></button></figure>
         </div>
       </div>
     </section>
@@ -271,6 +271,6 @@
   <div class="progress-rail" aria-hidden="true"><span id="progress"></span></div>
   <div class="section-counter" aria-hidden="true"><span id="sectionNow">01</span><b>/ 10</b></div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
